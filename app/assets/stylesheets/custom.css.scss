@@ -1,0 +1,21 @@
+@import "semantic-ui";
+
+.chatbox
+{
+	height: 450px;
+	/*overflow: scroll;*/
+}
+.signupbtn, .signupbtn:hover
+{
+	color: #fff;
+}
+
+#messages
+{
+	height: 15em;
+	overflow-y: auto;
+}
+.ui.feed > .event
+{
+	padding-bottom: 0px;
+}

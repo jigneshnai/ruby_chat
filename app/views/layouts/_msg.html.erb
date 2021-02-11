@@ -1,0 +1,10 @@
+<% flash.each do |msg_type, msg| %>
+    <div class="ui container">
+	    <div class="ui <%= msg_type%> message transition">
+	    	<i class="close icon"></i>
+	    	<div class="header">
+	    		<%= msg %>	
+	    	</div>	    	
+	    </div>    
+  	</div>
+<% end %>

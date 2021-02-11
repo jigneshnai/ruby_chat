@@ -1,0 +1,11 @@
+<div class="event">
+	<div class="content">
+		<div class="summary">
+			<%if message.msgtype == "text"%>
+				<a><%= message.user.name %></a>: <%= message.msg%>
+			<%else%>
+				<a><%= message.user.name %></a>: <a href="/uploads/<%= message.msg%>" target="_blank"><%= message.msg%></a>
+			<%end%>
+		</div>
+	</div>
+</div>

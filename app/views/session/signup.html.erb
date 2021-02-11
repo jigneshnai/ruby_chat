@@ -1,0 +1,46 @@
+<h2 class="ui center aligned icon header">  
+  Chat Room Signup
+</h2>
+
+<div id="errors" class="ui error message" role="alert" style="display: none">
+  <b>Errors Please Check!</b>
+  <ul></ul> 
+</div>
+<div class="ui success message" role="alert" id="suc_msg" style="display: none"> 
+</div>
+
+<div class="ui">
+  <div class="ui placeholder segment">
+    <div class="ui column very relaxed stackable grid">
+      <div class="column">
+        <div class="ui form">
+          <form id="signup_form">
+            <div class="field">
+              <label>Username</label>
+              <div class="ui left icon input">
+                <input type="text" class="username" placeholder="Username" name="name">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <div class="ui left icon input">
+                <input type="email" class="useremail" name="email" placeholder="Email">
+                <i class="user icon"></i>
+              </div>
+            </div>          
+            <div class="field">
+              <label>Password</label>
+              <div class="ui left icon input">
+                <input type="password" class="userpassword" name="password" placeholder="Password">
+                <i class="lock icon"></i>
+              </div>
+            </div>
+            <div class="ui blue submit button"><a class="signupbtn" onclick="signup_user(this)">Signup</div></a>
+            <div class="ui blue submit button msgwait" style="display: none">Please Wait...</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

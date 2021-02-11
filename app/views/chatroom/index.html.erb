@@ -1,0 +1,66 @@
+<h2 class="ui center aligned icon header">
+	<i class="circular users icon"></i>
+</h2>
+<div class="ui two column grid">
+	<div class="twelve wide column">
+		<div class="ui fluid raised card chatbox">
+			<div class="content" id="messages">
+				<div class="ui small feed" id="message-container">
+					<%= render @messages %>
+				</div>    
+			</div>
+			<%if logged_in?%>
+			<div class="extra content">
+				 <%= form_for(@message, html: {class: "ui reply form",role: "form",:multipart => true}, url: message_path, remote: true) do |f|%>
+				  <!-- <form class="ui reply form" method="post" action="<%= message_path%>"> -->
+				  <!-- <form id="send_message_form"> -->
+				  	<%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
+				    <div class="field">
+					    <div class="ui fluid icon input">
+					    	<input type="text" class="msgbox" name="msg" placeholder="Type your message">
+					    	<input type="file" class="msgfile" name="msgfile"><br>
+					    	<%#=  f.text_field :msg %>
+					      <%=  f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
+					      <!-- <button type="submit">
+					      	<i class="bordered inverted orange edit icon"></i>
+					      </button> -->
+					     
+					    </div>
+				    </div>				    
+				  <%end%>
+			<!-- 	  </form> -->
+			</div>
+			<%end%>
+		</div>
+	</div>
+	<div class="four wide column">
+		<div class="ui fluid raised card chatbox">
+			<div class="content">
+				<div class="ui inverted vertical menu" style="width:100%">
+					<a class="active item">
+						Home
+					</a>
+					<a class="item">
+						Messages
+					</a>
+					<a class="item">
+						Friends
+					</a>
+				</div>  
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <form action="<%= message_file_path%>" enctype="multipart/form-data" method="post">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<input type="file" name="photo"><br>
+	<input type="submit" value="Send"> 
+</form>
+
+<img src="/uploads/download.jpeg"> -->
